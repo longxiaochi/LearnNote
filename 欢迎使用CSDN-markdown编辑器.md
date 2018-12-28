@@ -74,7 +74,6 @@ H~2~O is是液体。
 
 去[博客设置](https://mp.csdn.net/configure)页面，选择一款你喜欢的代码片高亮样式，下面展示同样高亮的 `代码片`.
 ```javascript
-// An highlighted block
 var foo = 'bar';
 ```
 

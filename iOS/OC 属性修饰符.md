@@ -93,6 +93,16 @@ ARC中apple会自动在需要进行内存管理的地方添加retain/release, �
 3. 用以alloc/new/copy/mutableCopy为前缀的方法名创建的对象，是自己创建并持有的。其他的会默认放入autoreleasepool中。
 
 
+## 相关问题
+1. 这个写法会出什么问题： @property (copy) NSMutableArray *array;
+   
+   两个问题：1、添加,删除,修改数组内的元素的时候,程序会因为找不到对应的方法而崩溃.因为 copy 就是复制一个不可变 NSArray 的对象；2、使用了 atomic 属性会严重影响性能 ；
+    
+
+
+
+
+
  [1]: https://www.jianshu.com/p/3cbc79424fb8
  [2]: https://www.jianshu.com/p/ec2c854b2efd
 
